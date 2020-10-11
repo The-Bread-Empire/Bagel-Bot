@@ -1,7 +1,6 @@
 import discord
 import os
 import random
-import javascript
 import time
 from time import sleep
 from keep_alive import keep_alive
@@ -14,7 +13,7 @@ from datetime import datetime
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 from clear import clear
-from index import awesome
+
 
 bot = commands.Bot(
 	command_prefix="$",
@@ -29,7 +28,6 @@ async def on_ready():
 #start of commands
 
 
-awesome()
 
 #end of commands
 keep_alive()
