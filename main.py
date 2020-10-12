@@ -14,18 +14,25 @@ from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 from clear import clear
 
+bot = commands.Bot(command_prefix="^", case_insensitive=True)
 
-bot = commands.Bot(
-	command_prefix="$",
-	case_insensitive=True
-)
-@bot.event 
+
+@bot.event
 async def on_ready():
-  clear()
-  print("I'm in")
-  print(bot.user)
-    
+    clear()
+    print("I'm in")
+    print(bot.user)
+
 #start of commands
+
+@bot.command(name="blank")
+async def on_message(ctx):
+  await ctx.send("test")
+
+
+@bot.command(name="dm")
+async def id_(ctx, user: discord.User):
+  await user.send("Good Birthday")
 
 
 
